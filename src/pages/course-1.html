@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Fundamentals | LearnVibes Academy</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <i data-feather="book-open" class="text-indigo-600 h-6 w-6"></i>
+              <span class="ml-2 text-xl font-bold text-gray-900"
+                >LearnVibes</span
+              >
+            </div>
+          </div>
+          <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium"
+              >Courses</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium"
+              >Dashboard</a
+            >
+            <button
+              class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Course Header -->
+    <div class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between"
+        >
+          <div class="flex-1 min-w-0">
+            <h1
+              class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
+            >
+              Web Development Fundamentals
+            </h1>
+            <div
+              class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6"
+            >
+              <div class="mt-2 flex items-center text-sm text-gray-500">
+                <i
+                  data-feather="user"
+                  class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                ></i>
+                Sarah Johnson
+              </div>
+              <div class="mt-2 flex items-center text-sm text-gray-500">
+                <i
+                  data-feather="calendar"
+                  class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                ></i>
+                8 weeks
+              </div>
+              <div class="mt-2 flex items-center text-sm text-gray-500">
+                <i
+                  data-feather="book"
+                  class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                ></i>
+                24 lessons
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex md:mt-0 md:ml-4">
+            <button
+              type="button"
+              id="mark-complete"
+              class="ml-3 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+            >
+              <i data-feather="check" class="-ml-1 mr-2 h-5 w-5"></i>
+              Mark as Completed
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Lessons Sidebar -->
+        <div class="lg:w-1/3">
+          <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-200">
+              <h3 class="text-lg font-medium text-gray-900">Course Content</h3>
+              <div class="mt-2 flex items-center">
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-primary h-2.5 rounded-full"
+                    style="width: 35%"
+                  ></div>
+                </div>
+                <span class="ml-2 text-sm font-medium text-gray-500"
+                  >35% complete</span
+                >
+              </div>
+            </div>
+            <div class="divide-y divide-gray-200">
+              <!-- Module 1 -->
+              <div class="px-6 py-4">
+                <h4
+                  class="text-md font-medium text-gray-900 flex items-center justify-between"
+                >
+                  <span>Module 1: HTML Basics</span>
+                  <span class="text-xs text-gray-500">4/5 lessons</span>
+                </h4>
+                <ul class="mt-3 space-y-2">
+                  <li
+                    class="lesson-item px-3 py-2 rounded-md cursor-pointer active-lesson"
+                  >
+                    <div class="flex items-center">
+                      <i
+                        data-feather="play-circle"
+                        class="text-primary mr-2"
+                      ></i>
+                      <span class="text-sm font-medium"
+                        >Introduction to HTML</span
+                      >
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i
+                        data-feather="check-circle"
+                        class="text-green-500 mr-2"
+                      ></i>
+                      <span class="text-sm">HTML Document Structure</span>
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i
+                        data-feather="check-circle"
+                        class="text-green-500 mr-2"
+                      ></i>
+                      <span class="text-sm">HTML Elements and Tags</span>
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i
+                        data-feather="check-circle"
+                        class="text-green-500 mr-2"
+                      ></i>
+                      <span class="text-sm">Creating Links and Navigation</span>
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i data-feather="lock" class="text-gray-400 mr-2"></i>
+                      <span class="text-sm text-gray-500"
+                        >HTML Forms and Inputs</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Module 2 -->
+              <div class="px-6 py-4">
+                <h4
+                  class="text-md font-medium text-gray-900 flex items-center justify-between"
+                >
+                  <span>Module 2: CSS Fundamentals</span>
+                  <span class="text-xs text-gray-500">0/6 lessons</span>
+                </h4>
+                <ul class="mt-3 space-y-2">
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i data-feather="lock" class="text-gray-400 mr-2"></i>
+                      <span class="text-sm text-gray-500"
+                        >Introduction to CSS</span
+                      >
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i data-feather="lock" class="text-gray-400 mr-2"></i>
+                      <span class="text-sm text-gray-500"
+                        >CSS Selectors and Properties</span
+                      >
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i data-feather="lock" class="text-gray-400 mr-2"></i>
+                      <span class="text-sm text-gray-500"
+                        >Box Model and Layout</span
+                      >
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i data-feather="lock" class="text-gray-400 mr-2"></i>
+                      <span class="text-sm text-gray-500"
+                        >Flexbox and Grid</span
+                      >
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i data-feather="lock" class="text-gray-400 mr-2"></i>
+                      <span class="text-sm text-gray-500"
+                        >Responsive Design</span
+                      >
+                    </div>
+                  </li>
+                  <li class="lesson-item px-3 py-2 rounded-md cursor-pointer">
+                    <div class="flex items-center">
+                      <i data-feather="lock" class="text-gray-400 mr-2"></i>
+                      <span class="text-sm text-gray-500"
+                        >CSS Transitions and Animations</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resources -->
+          <div class="mt-6 bg-white shadow rounded-lg overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-200">
+              <h3 class="text-lg font-medium text-gray-900">Resources</h3>
+            </div>
+            <div class="px-6 py-4">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center"
+                  >
+                    <i data-feather="file-text" class="text-primary"></i>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">
+                      HTML Cheat Sheet
+                    </p>
+                    <p class="text-sm text-gray-500">PDF • 320KB</p>
+                  </div>
+                  <div class="ml-auto">
+                    <button class="text-primary hover:text-indigo-700">
+                      <i data-feather="download"></i>
+                    </button>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center"
+                  >
+                    <i data-feather="link" class="text-primary"></i>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-sm font-medium text-gray-900">
+                      Useful HTML Resources
+                    </p>
+                    <p class="text-sm text-gray-500">External Links</p>
+                  </div>
+                  <div class="ml-auto">
+                    <button class="text-primary hover:text-indigo-700">
+                      <i data-feather="external-link"></i>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson Content -->
+        <div class="lg:w-2/3">
+          <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="aspect-w-16 aspect-h-9">
+              <img
+                src="http://static.photos/technology/1024x576/1"
+                alt="HTML Introduction"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                Introduction to HTML
+              </h2>
+              <div class="prose max-w-none text-gray-500">
+                <p>
+                  HTML (HyperText Markup Language) is the standard markup
+                  language for creating web pages and web applications. With
+                  HTML you can create your own Website.
+                </p>
+                <p>
+                  HTML is easy to learn - You will enjoy it! This tutorial will
+                  teach you the basics of HTML.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-900 mt-6">
+                  What is HTML?
+                </h3>
+                <ul class="list-disc pl-5 space-y-2 mt-2">
+                  <li>HTML stands for Hyper Text Markup Language</li>
+                  <li>
+                    HTML is the standard markup language for creating Web pages
+                  </li>
+                  <li>HTML describes the structure of a Web page</li>
+                  <li>HTML consists of a series of elements</li>
+                  <li>
+                    HTML elements tell the browser how to display the content
+                  </li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-900 mt-6">
+                  Basic HTML Example
+                </h3>
+                <pre
+                  class="bg-gray-100 p-4 rounded-md mt-2"
+                ><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <div class="mt-8 border-t border-gray-200 pt-6">
+                  <button
+                    class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  >
+                    <i
+                      data-feather="check-circle"
+                      class="-ml-1 mr-2 h-5 w-5"
+                    ></i>
+                    Mark as Complete
+                  </button>
+                  <button
+                    class="ml-3 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  >
+                    <i
+                      data-feather="arrow-right"
+                      class="-ml-1 mr-2 h-5 w-5"
+                    ></i>
+                    Next Lesson
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-300 tracking-wider uppercase"
+            >
+              Learn
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Tutorials</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Resources</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-300 tracking-wider uppercase"
+            >
+              Company
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-300 tracking-wider uppercase"
+            >
+              Legal
+            </h3>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Terms</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-base text-gray-400 hover:text-white"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-sm font-semibold text-gray-300 tracking-wider uppercase"
+            >
+              Connect
+            </h3>
+            <div class="mt-4 flex space-x-6">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="facebook"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="instagram"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i data-feather="linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-gray-700 pt-8">
+          <p class="text-base text-gray-400 text-center">
+            &copy; 2023 LearnVibes Academy. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize feather icons
+        feather.replace();
+
+        // Mark course as complete
+        document
+          .getElementById("mark-complete")
+          .addEventListener("click", function () {
+            const button = this;
+            button.disabled = true;
+            button.innerHTML =
+              '<i data-feather="check-circle" class="-ml-1 mr-2 h-5 w-5"></i> Course Completed';
+            feather.replace();
+
+            // Save completion to localStorage
+            const completedCourses =
+              JSON.parse(localStorage.getItem("completedCourses")) || [];
+            if (!completedCourses.includes(1)) {
+              completedCourses.push(1);
+              localStorage.setItem(
+                "completedCourses",
+                JSON.stringify(completedCourses)
+              );
+            }
+
+            // Show confirmation
+            setTimeout(() => {
+              alert("Congratulations! You have completed this course.");
+            }, 500);
+          });
+
+        // Lesson item click handler
+        document.querySelectorAll(".lesson-item").forEach((item) => {
+          item.addEventListener("click", function () {
+            document.querySelectorAll(".lesson-item").forEach((i) => {
+              i.classList.remove("active-lesson");
+            });
+            this.classList.add("active-lesson");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

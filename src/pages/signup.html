@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | LearnVibes Academy</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body
+    class="bg-gray-50 font-sans min-h-screen flex items-center justify-center"
+  >
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div class="flex items-center justify-center mb-6">
+        <i data-feather="book-open" class="text-indigo-600 h-8 w-8"></i>
+        <span class="ml-2 text-2xl font-bold text-gray-900">LearnVibes</span>
+      </div>
+      <h2 class="text-2xl font-bold text-center mb-6">Create account</h2>
+      <form id="signup-form">
+        <div class="mb-4">
+          <label
+            for="username"
+            class="block text-sm font-medium text-gray-700 mb-2"
+            >Username</label
+          >
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-700 mb-2"
+            >Email address</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            for="password"
+            class="block text-sm font-medium text-gray-700 mb-2"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300"
+        >
+          Create account
+        </button>
+      </form>
+      <div class="mt-6 text-center">
+        <p class="text-sm text-gray-600">
+          Already have an account?
+          <a
+            href="login.html"
+            class="font-medium text-indigo-600 hover:text-indigo-500"
+            >Sign in</a
+          >
+        </p>
+        <p class="mt-2">
+          <a href="index.html" class="text-sm text-gray-500 hover:text-gray-700"
+            >← Back to home</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script>
+      feather.replace();
+
+      document
+        .getElementById("signup-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Check if user already exists
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          if (users.find((u) => u.username === username)) {
+            alert("Username already exists!");
+            return;
+          }
+          if (users.find((u) => u.email === email)) {
+            alert("Email already registered!");
+            return;
+          }
+
+          // Store new user
+          const newUser = { username, email, password };
+          users.push(newUser);
+          localStorage.setItem("users", JSON.stringify(users));
+
+          // Auto login
+          localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+          alert("Account created successfully!");
+          window.location.href = "../index.html";
+        });
+    </script>
+  </body>
+</html>
