@@ -4,7 +4,7 @@ A professional mini e-learning platform built with HTML, CSS, and JavaScript fea
 
 ## 🌐 Live Demo
 
-[View Live Demo](https://profian1.github.io/Mini-E-learning-week-1/src/)
+[View Live Demo]( https://profian1.github.io/Mini-E-learning-week-1/)
 
 ## Features
 
